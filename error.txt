@@ -1,0 +1,40 @@
+warning: LF will be replaced by CRLF in client/app/stylesheets/style.css. 
+The file will have its original line endings in your working directory. 
+warning: LF will be replaced by CRLF in config/config.js. 
+The file will have its original line endings in your working directory. 
+warning: LF will be replaced by CRLF in package.json. 
+The file will have its original line endings in your working directory. 
+warning: LF will be replaced by CRLF in server/config/config.js. 
+The file will have its original line endings in your working directory. 
+warning: LF will be replaced by CRLF in server/models/index.js. 
+The file will have its original line endings in your working directory. 
+29 files changed, 1929 insertions(+) 
+create mode 100644 .sequelizerc 
+create mode 100644 app/routes.js 
+create mode 100644 app/routes/api.js 
+create mode 100644 client/app/app.js 
+create mode 100644 client/app/app.routes.js 
+create mode 100644 client/app/controllers/mainController.js 
+create mode 100644 client/app/controllers/userController.js 
+create mode 100644 client/app/services/authService.js 
+create mode 100644 client/app/services/userService.js 
+create mode 100644 client/app/stylesheets/style.css 
+create mode 100644 client/app/views/index.html 
+create mode 100644 client/app/views/pages/404.html 
+create mode 100644 client/app/views/pages/given.html 
+create mode 100644 client/app/views/pages/home.html 
+create mode 100644 client/app/views/pages/login.html 
+create mode 100644 client/app/views/pages/signup.html 
+create mode 100644 config/config.js 
+create mode 100644 index.js 
+create mode 100644 package.json 
+create mode 100644 public/images/4041.jpeg 
+create mode 100644 server/config/config.js 
+create mode 100644 server/config/passport.js 
+create mode 100644 server/controllers/users.js 
+create mode 100644 server/models/index.js 
+create mode 100644 server/models/user.js 
+create mode 100644 views/index.ejs 
+create mode 100644 views/login.ejs 
+create mode 100644 views/profile.ejs 
+create mode 100644 views/signup.ejs

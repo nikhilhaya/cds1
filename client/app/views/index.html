@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html ng-app="MyApp">
+
+	<head>
+
+		<base href='/'>
+
+		<title> CDS Login </title>
+
+		<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.css" />
+		
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+			body { 
+			  background-color: #d9d9d9; 
+			  font-family: "Roboto", sans-serif; 
+			  -webkit-font-smoothing: antialiased; 
+			  -moz-osx-font-smoothing: grayscale;
+			}
+			.mainContent{ 
+			  height: 500px;
+			}
+			.navbar{ 
+			  margin:0.0px; 
+			  border-radius: 0px; 
+			  border: 0px;}
+			/*background-image: url("daemonlogo.jpeg");*/
+			footer{
+			  margin-top: 60px;
+			}
+		</style>
+		
+	</head>
+
+	<body ng-controller="MainController as main">
+	<!-- <body ng-controller="MainController as main"> -->
+		<!-- CDN Scripts -->
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+		<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script> -->
+		<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular-route.min.js"></script> -->
+
+		<!-- Bower Scripts -->
+		<script src="../../bower_components/jquery/dist/jquery.js"></script>
+		<script src="../../bower_components/angular/angular.js"></script>
+		<script src="../../bower_components/angular-route/angular-route.js"></script>
+		<script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		
+		<script type="text/javascript" src="app/services/authService.js"></script>
+		<script type="text/javascript" src="app/services/userService.js"></script>
+		<script type="text/javascript" src="app/services/companyService.js"></script>
+
+		<script type="text/javascript" src="app/controllers/mainController.js"></script>
+		<script type="text/javascript" src="app/controllers/userController.js"></script>
+		<script type="text/javascript" src="app/controllers/companyController.js"></script>
+
+		<script type="text/javascript" src="app/app.routes.js"></script>
+		<script type="text/javascript" src="app/app.js"></script>
+
+		<header>
+			<div class="navbar navbar-inverse">
+				<div class="container">
+					<div class="navbar-header">
+						<a href="/" class="navbar-brand">
+							Club Demonstration Services, Inc.
+						</a>
+					</div>
+
+					<ul class="nav navbar-nav">
+						<li><a href="/users"></a></li>
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li ng-if="!main.loggedIn"><a href="/login">Login</a></li>
+						<li ng-if="!main.loggedIn"><a href="/signup">Sign Up</a></li>
+						<li ng-if="main.loggedIn"><a href="#">Hello {{ main.user.username }}</a></li>
+						<li><a href="#">Change Password</a></li>
+						<li ng-if="main.loggedIn"><a href="#" ng-click="main.doLogout()">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+					<ng-if="main.user.isadmin">
+					<div ng-if="main.loggedIn">
+						<div class="navbar navbar-inverse">
+							<div class="container">
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="/companycreate">Scheduling</a></li>
+									<li><a href="#">Staffing</a></li>
+									<li><a href="#">Billing</a></li>
+									<li><a href="#">Auditing</a></li>
+									<li><a href="#">A/R</a></li>
+									<li><a href="#">A/P</a></li>
+									<li><a href="#">Operations</a></li>
+									<li><a href="#">Reports</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					</ng-if="main.user.isadmin">
+		</header>
+
+		<main class="container">
+			<div class="mainContent">
+				<div ng-view>
+					{{2+2}}
+				</div>
+			</div>
+		</main>
+
+
+
+	</body>
+
+	<footer>
+	<center>
+		<section class="about">
+		    <p class="about-links">
+		    </p>
+		    <p class="about-author">
+		      &copy; 2016&ndash;2017 Daymon CDS<br>
+		       DI Global Tech Support - (800) 573-8861 <a href="#" target="_blank"></a>
+		</p>
+		</section>
+		</center>
+	</footer>
+
+
+</html>

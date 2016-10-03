@@ -1,0 +1,81 @@
+<div ng-controller="CompanyDetailController as company">
+
+<div class="options">
+  <div id="options-buttons">
+    <button type="button" class="btn btn-primary back" id="back" class="back" href="#" title="back">Go Back</a>
+    <button type="button" class="btn btn-default edit" id="edit" class="edit" href="#" title="edit">Edit Form</a>
+    <button type="button" class="btn btn-default delete" id="delete" class="delete" href="#" title="delete">Delete</a>
+  </div>
+</div>
+
+
+<div class="panel panel-default" ng-init="company.detailCompany()">
+	<div class="panel-heading">
+		<h3 class="panel-title">Preview Details: {{company.company.name}}</h3>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="{{company.company.imageurl}}" />
+			</div>
+			<div class="col-md-8">
+				<p>{{company.company.name}}</p>
+				<ul class="list-group">
+					<li class="list-group-item">Name: {{company.company.name}}</li>
+					<li class="list-group-item">Abrev: {{company.company.abrev}}</li>
+					<li class="list-group-item">Weekend Max: {{company.company.weekendmax}}</li>
+					<li class="list-group-item">Terms: {{company.company.terms}}</li>
+					<li class="list-group-item">URL: {{company.company.url}}</li>
+					<li class="list-group-item">Store: {{company.company.store}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
+<style>
+	.options {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	    /*height: 50px;*/
+	    width: 100%;
+	}
+	#options-buttons {
+	    height: 40px;
+	    width: 100%;
+	    position: relative;
+	}
+	/* Buttons */
+	.back
+	{
+	  position: absolute;
+	  top: 3px;
+	  left: 0px;
+	  background-repeat: no-repeat;
+	  outline: none;
+	  border: 0px;
+	  background-color: #555555;
+	}
+	.edit
+	{
+	  position: absolute;
+	  top: 3px;
+	  right: 0px;
+	  background-repeat: no-repeat;
+	  outline: none;
+	  background-color: #e7e7e7; color: black;
+	}
+	.delete
+	{
+	  position: absolute;
+	  top: 3px;
+	  right: 90px;
+	  background-repeat: no-repeat;
+	  outline: none;
+	  background-color: #e7e7e7; color: black;
+	}
+</style>
